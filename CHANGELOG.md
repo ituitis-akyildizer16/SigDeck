@@ -7,3 +7,4 @@
 ## [2.0.0] - 2025-10-08
 - Android demo app with sign/verify screens
 - QR payload format finalised (SGDK1:)
+
