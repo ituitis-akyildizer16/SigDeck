@@ -8,3 +8,5 @@
 - Android demo app with sign/verify screens
 - QR payload format finalised (SGDK1:)
 
+## [1.2.0] - 2025-05-15
+- detached signatures + batch signing
