@@ -10,3 +10,5 @@
 
 ## [1.2.0] - 2025-05-15
 - detached signatures + batch signing
+- armored signature blocks with CRC32
+
