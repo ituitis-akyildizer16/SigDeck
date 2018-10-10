@@ -12,3 +12,4 @@
 - detached signatures + batch signing
 - armored signature blocks with CRC32
 
+## [1.0.0] - 2024-06-24
