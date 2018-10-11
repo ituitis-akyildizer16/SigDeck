@@ -15,3 +15,5 @@
 ## [1.0.0] - 2024-06-24
 - first stable: sign, verify, armor, QR
 - pure-python Ed25519 core with RFC 8032 vectors
+
+## [0.3.0] - 2023-11-15
