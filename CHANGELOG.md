@@ -18,3 +18,5 @@
 
 ## [0.3.0] - 2023-11-15
 - QR exchange payloads, export-qr / import-qr commands
+
+## [0.2.0] - 2023-03-22
