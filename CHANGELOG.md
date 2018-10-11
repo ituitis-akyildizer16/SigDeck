@@ -13,3 +13,5 @@
 - armored signature blocks with CRC32
 
 ## [1.0.0] - 2024-06-24
+- first stable: sign, verify, armor, QR
+- pure-python Ed25519 core with RFC 8032 vectors
