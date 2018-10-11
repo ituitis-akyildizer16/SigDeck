@@ -17,3 +17,4 @@
 - pure-python Ed25519 core with RFC 8032 vectors
 
 ## [0.3.0] - 2023-11-15
+- QR exchange payloads, export-qr / import-qr commands
