@@ -4,3 +4,4 @@ PY ?= python3
 
 test:
 	$(PY) -m pytest tests/ -o addopts=""
+
