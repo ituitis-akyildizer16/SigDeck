@@ -7,3 +7,4 @@ test:
 
 lint:
 	$(PY) -m compileall -q sigdeck/
+
