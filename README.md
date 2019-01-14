@@ -11,3 +11,7 @@ passphrases, and ASCII armor. The signing playground for people who don't
 trust their clipboard.
 
 ## Why this exists
+
+I wanted a signing tool I could run on a machine with no network at all - no
+pip downloads, no telemetry, no cloud. SigDeck is a single Python package with
+a from-scratch Ed25519 core, a passphrase-wrapped secret key format, and QR
