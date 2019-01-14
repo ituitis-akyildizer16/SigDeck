@@ -7,3 +7,7 @@
 
 **Offline Ed25519 signing toolkit** - sign files, verify signatures, exchange
 keys via QR. Fully air-gapped: a pure-Python RFC 8032 implementation, scrypt
+passphrases, and ASCII armor. The signing playground for people who don't
+trust their clipboard.
+
+## Why this exists
