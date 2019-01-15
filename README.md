@@ -22,3 +22,6 @@ payloads for moving keys and signatures across an air gap.
 ```
 sigdeck/    the Python engine (pure stdlib: keys, sign, verify, armor, qr)
 app/        minimal Android demo: scan QR keys, sign, verify
+docs/       guides (getting started, formats, qr exchange, shortcuts)
+examples/   end-to-end recipes (signing releases, qr verification)
+```
