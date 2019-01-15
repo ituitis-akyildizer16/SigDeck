@@ -18,3 +18,7 @@ a from-scratch Ed25519 core, a passphrase-wrapped secret key format, and QR
 payloads for moving keys and signatures across an air gap.
 
 ## Layout
+
+```
+sigdeck/    the Python engine (pure stdlib: keys, sign, verify, armor, qr)
+app/        minimal Android demo: scan QR keys, sign, verify
