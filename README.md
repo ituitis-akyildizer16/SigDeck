@@ -33,3 +33,6 @@ $ pip install -e .
 $ sd keygen --out alice.key
 $ sd pub alice.key --output alice.pub
 $ sd sign release.tar.gz --key alice.key
+$ sd verify release.tar.gz --sig release.tar.gz.sig --pub alice.pub
+Verified
+```
