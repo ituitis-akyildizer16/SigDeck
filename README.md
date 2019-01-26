@@ -29,3 +29,7 @@ examples/   end-to-end recipes (signing releases, qr verification)
 ## Quick start
 
 ```console
+$ pip install -e .
+$ sd keygen --out alice.key
+$ sd pub alice.key --output alice.pub
+$ sd sign release.tar.gz --key alice.key
