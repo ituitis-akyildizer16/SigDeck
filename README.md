@@ -25,3 +25,7 @@ app/        minimal Android demo: scan QR keys, sign, verify
 docs/       guides (getting started, formats, qr exchange, shortcuts)
 examples/   end-to-end recipes (signing releases, qr verification)
 ```
+
+## Quick start
+
+```console
