@@ -36,3 +36,7 @@ $ sd sign release.tar.gz --key alice.key
 $ sd verify release.tar.gz --sig release.tar.gz.sig --pub alice.pub
 Verified
 ```
+
+## The signing playground rules
+
+- **Pure stdlib** - the whole engine uses `hashlib`, `hmac`, `base64`, `os`,
