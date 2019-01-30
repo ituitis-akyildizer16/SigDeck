@@ -40,3 +40,7 @@ Verified
 ## The signing playground rules
 
 - **Pure stdlib** - the whole engine uses `hashlib`, `hmac`, `base64`, `os`,
+  `zlib`. Nothing to download, ever.
+- **Ed25519 from scratch** - RFC 8032, test-vector verified (see tests).
+- **Passphrase option** - secret keys can be sealed with scrypt
+  (`hashlib.scrypt`) so a stolen key file is still useless.
