@@ -47,3 +47,7 @@ Verified
 - **QR exchange** - `SGDK1:` payloads carry public keys and signatures
   across air gaps (print, scan, done).
 
+## Requirements
+
+- Python 3.9+ (no third-party dependencies for the engine)
+- Android Studio for the demo app
