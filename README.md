@@ -44,3 +44,6 @@ Verified
 - **Ed25519 from scratch** - RFC 8032, test-vector verified (see tests).
 - **Passphrase option** - secret keys can be sealed with scrypt
   (`hashlib.scrypt`) so a stolen key file is still useless.
+- **QR exchange** - `SGDK1:` payloads carry public keys and signatures
+  across air gaps (print, scan, done).
+
