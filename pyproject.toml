@@ -8,3 +8,5 @@ version = "2.1.0"
 description = "Offline Ed25519 signing toolkit - pure-python RFC 8032, armor, QR exchange"
 readme = "README.md"
 requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["ed25519", "signing", "cryptography", "offline", "air-gapped"]
