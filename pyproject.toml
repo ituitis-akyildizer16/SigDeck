@@ -12,3 +12,5 @@ license = { text = "MIT" }
 keywords = ["ed25519", "signing", "cryptography", "offline", "air-gapped"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
