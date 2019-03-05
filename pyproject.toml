@@ -19,3 +19,5 @@ classifiers = [
     "Topic :: Security :: Cryptography",
 ]
 
+[project.scripts]
+sd = "sigdeck.cli:main"
