@@ -21,3 +21,9 @@ def _xrecover(y):
     xx = (y * y - 1) * _inv(D * y * y + 1) % P
     x = pow(xx, (P + 3) // 8, P)
     if (x * x - xx) % P:
+        x = x * I % P
+    if x % 2:
+        x = P - x
+    return x
+
+
