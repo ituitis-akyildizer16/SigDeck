@@ -21,3 +21,5 @@ classifiers = [
 
 [project.scripts]
 sd = "sigdeck.cli:main"
+
+[tool.setuptools.packages.find]
