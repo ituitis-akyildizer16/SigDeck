@@ -27,3 +27,10 @@ def _xrecover(y):
     return x
 
 
+_BY = 4 * _inv(5) % P
+_BX = _xrecover(_BY)
+B = (_BX, _BY)
+
+
+def _encodepoint(point):
+    x, y = point
