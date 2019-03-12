@@ -34,3 +34,9 @@ B = (_BX, _BY)
 
 def _encodepoint(point):
     x, y = point
+    bits = [(y >> i) & 1 for i in range(255)] + [x & 1]
+    return bytes(sum(bits[i * 8 + j] << j for j in range(8))
+                 for i in range(32))
+
+
+def _decodepoint(s):
