@@ -40,3 +40,9 @@ def _encodepoint(point):
 
 
 def _decodepoint(s):
+    if len(s) != 32:
+        raise ValueError("point must be 32 bytes")
+    y = int.from_bytes(s, "little") & ((1 << 255) - 1)
+    x = _xrecover(y)
+    if x & 1 != (s[31] >> 7):
+        x = P - x
