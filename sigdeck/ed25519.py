@@ -52,3 +52,9 @@ def _decodepoint(s):
 def _point_add(p1, p2):
     x1, y1 = p1
     x2, y2 = p2
+    x3 = (x1 * y2 + y1 * x2) * _inv(1 + D * x1 * x2 * y1 * y2) % P
+    y3 = (y1 * y2 + x1 * x2) * _inv(1 - D * x1 * x2 * y1 * y2) % P
+    return (x3, y3)
+
+
+def _scalarmult(point, e):
