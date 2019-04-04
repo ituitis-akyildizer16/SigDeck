@@ -46,3 +46,9 @@ def _decodepoint(s):
     x = _xrecover(y)
     if x & 1 != (s[31] >> 7):
         x = P - x
+    return (x, y)
+
+
+def _point_add(p1, p2):
+    x1, y1 = p1
+    x2, y2 = p2
