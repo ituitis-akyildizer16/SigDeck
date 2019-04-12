@@ -58,3 +58,9 @@ def _point_add(p1, p2):
 
 
 def _scalarmult(point, e):
+    if e == 0:
+        return (0, 1)
+    q = _scalarmult(point, e >> 1)
+    q = _point_add(q, q)
+    if e & 1:
+        q = _point_add(q, point)
