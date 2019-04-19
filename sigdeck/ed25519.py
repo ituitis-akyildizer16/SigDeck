@@ -64,3 +64,10 @@ def _scalarmult(point, e):
     q = _point_add(q, q)
     if e & 1:
         q = _point_add(q, point)
+    return q
+
+
+def _scalarmult_base(e):
+    return _scalarmult(B, e)
+
+
