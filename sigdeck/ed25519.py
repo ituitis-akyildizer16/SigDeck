@@ -71,3 +71,9 @@ def _scalarmult_base(e):
     return _scalarmult(B, e)
 
 
+def public_key(seed):
+    """32-byte seed -> 32-byte public key."""
+    a, _ = _secret_expand(seed)
+    return _encodepoint(_scalarmult_base(a))
+
+
