@@ -89,3 +89,9 @@ def sign(message, seed):
     """32-byte seed + message -> 64-byte signature."""
     a, prefix = _secret_expand(seed)
     a_point = _encodepoint(_scalarmult_base(a))
+    r = int.from_bytes(hashlib.sha512(prefix + message).digest(), "little") % L
+    r_point = _encodepoint(_scalarmult_base(r))
+    h = int.from_bytes(hashlib.sha512(r_point + a_point + message).digest(),
+                       "little") % L
+    s = (r + h * a) % L
+    return r_point + s.to_bytes(32, "little")
