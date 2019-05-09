@@ -77,3 +77,9 @@ def public_key(seed):
     return _encodepoint(_scalarmult_base(a))
 
 
+def _secret_expand(seed):
+    h = hashlib.sha512(seed).digest()
+    a = int.from_bytes(h[:32], "little")
+    a &= (1 << 254) - 8
+    a |= 1 << 254
+    return a, h[32:]
