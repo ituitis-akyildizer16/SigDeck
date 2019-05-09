@@ -83,3 +83,9 @@ def _secret_expand(seed):
     a &= (1 << 254) - 8
     a |= 1 << 254
     return a, h[32:]
+
+
+def sign(message, seed):
+    """32-byte seed + message -> 64-byte signature."""
+    a, prefix = _secret_expand(seed)
+    a_point = _encodepoint(_scalarmult_base(a))
