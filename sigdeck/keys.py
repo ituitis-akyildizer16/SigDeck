@@ -28,3 +28,8 @@ def _wrap(b64, width=64):
 
 
 def armor_public(public, comment=""):
+    lines = [ARMOR_PUB]
+    if comment:
+        lines.append(f"Comment: {comment}")
+    lines.append("")
+    lines.append(_wrap(base64.b64encode(public).decode("ascii")))
