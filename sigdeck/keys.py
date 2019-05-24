@@ -10,3 +10,7 @@ ARMOR_PUB = "-----BEGIN SIGDECK PUBLIC KEY-----"
 ARMOR_SEC = "-----BEGIN SIGDECK SECRET KEY-----"
 ARMOR_END = "-----END SIGDECK {kind} KEY-----"
 
+
+class KeyError2(Exception):
+    pass
+
