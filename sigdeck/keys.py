@@ -14,3 +14,8 @@ ARMOR_END = "-----END SIGDECK {kind} KEY-----"
 class KeyError2(Exception):
     pass
 
+
+def generate_seed():
+    return os.urandom(32)
+
+
