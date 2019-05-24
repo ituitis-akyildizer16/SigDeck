@@ -24,3 +24,7 @@ def public_bytes(seed):
 
 
 def _wrap(b64, width=64):
+    return "\n".join(b64[i:i + width] for i in range(0, len(b64), width))
+
+
+def armor_public(public, comment=""):
