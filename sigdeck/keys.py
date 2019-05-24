@@ -19,3 +19,8 @@ def generate_seed():
     return os.urandom(32)
 
 
+def public_bytes(seed):
+    return ed25519.public_key(seed)
+
+
+def _wrap(b64, width=64):
