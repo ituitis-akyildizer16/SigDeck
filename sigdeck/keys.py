@@ -33,3 +33,7 @@ def armor_public(public, comment=""):
         lines.append(f"Comment: {comment}")
     lines.append("")
     lines.append(_wrap(base64.b64encode(public).decode("ascii")))
+    lines.append(ARMOR_END.replace("{kind}", "PUBLIC"))
+    return "\n".join(lines) + "\n"
+
+
