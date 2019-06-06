@@ -46,3 +46,8 @@ def armor_secret(seed, comment=""):
     lines.append(_wrap(body))
     lines.append(ARMOR_END.replace("{kind}", "SECRET"))
     return "\n".join(lines) + "\n"
+
+
+def _parse(text, kind):
+    begin = ARMOR_PUB if kind == "PUBLIC" else ARMOR_SEC
+    end = ARMOR_END.replace("{kind}", kind)
