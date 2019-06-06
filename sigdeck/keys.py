@@ -37,3 +37,8 @@ def armor_public(public, comment=""):
     return "\n".join(lines) + "\n"
 
 
+def armor_secret(seed, comment=""):
+    body = base64.b64encode(seed).decode("ascii")
+    lines = [ARMOR_SEC]
+    if comment:
+        lines.append(f"Comment: {comment}")
