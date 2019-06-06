@@ -42,3 +42,7 @@ def armor_secret(seed, comment=""):
     lines = [ARMOR_SEC]
     if comment:
         lines.append(f"Comment: {comment}")
+    lines.append("")
+    lines.append(_wrap(body))
+    lines.append(ARMOR_END.replace("{kind}", "SECRET"))
+    return "\n".join(lines) + "\n"
