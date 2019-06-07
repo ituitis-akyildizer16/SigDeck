@@ -51,3 +51,8 @@ def armor_secret(seed, comment=""):
 def _parse(text, kind):
     begin = ARMOR_PUB if kind == "PUBLIC" else ARMOR_SEC
     end = ARMOR_END.replace("{kind}", kind)
+    if begin not in text or end not in text:
+        raise KeyError2(f"not a SIGDECK {kind} key")
+    body = text.split(begin, 1)[1].split(end, 1)[0]
+    chunks = []
+    for line in body.splitlines():
