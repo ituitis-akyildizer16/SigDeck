@@ -60,3 +60,8 @@ def _parse(text, kind):
         if not line or line.startswith("Comment:"):
             continue
         chunks.append(line)
+    return base64.b64decode("".join(chunks))
+
+
+def load_public(path):
+    text = Path(path).read_text("utf-8")
