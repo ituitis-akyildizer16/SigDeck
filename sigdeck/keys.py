@@ -56,3 +56,7 @@ def _parse(text, kind):
     body = text.split(begin, 1)[1].split(end, 1)[0]
     chunks = []
     for line in body.splitlines():
+        line = line.strip()
+        if not line or line.startswith("Comment:"):
+            continue
+        chunks.append(line)
