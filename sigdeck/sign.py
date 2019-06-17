@@ -6,3 +6,4 @@ from . import ed25519
 def sign_bytes(message, seed):
     return ed25519.sign(message, seed)
 
+
