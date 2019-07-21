@@ -9,3 +9,6 @@ def verify_bytes(signature, message, public):
     except ValueError:
         return False
 
+
+def verify_file(signature_path, file_path, public):
+    sig = signature_path.read_bytes()
