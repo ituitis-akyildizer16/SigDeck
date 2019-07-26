@@ -12,3 +12,5 @@ def verify_bytes(signature, message, public):
 
 def verify_file(signature_path, file_path, public):
     sig = signature_path.read_bytes()
+    if sig[:1] == b"-":
+        from .armor import parse_signature
