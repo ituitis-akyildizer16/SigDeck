@@ -16,3 +16,5 @@ def verify_file(signature_path, file_path, public):
         from .armor import parse_signature
         sig = parse_signature(sig.decode("utf-8"))
     return verify_bytes(sig, file_path.read_bytes(), public)
+
+
