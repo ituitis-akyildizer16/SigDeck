@@ -20,3 +20,5 @@ def verify_file(signature_path, file_path, public):
 
 def verify_dir(directory, public, suffix=".sig"):
     """Batch verify: every <file><suffix> in a directory."""
+    directory = __import__("pathlib").Path(directory)
+    results = []
