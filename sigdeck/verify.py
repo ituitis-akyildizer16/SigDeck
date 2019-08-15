@@ -22,3 +22,5 @@ def verify_dir(directory, public, suffix=".sig"):
     """Batch verify: every <file><suffix> in a directory."""
     directory = __import__("pathlib").Path(directory)
     results = []
+    for sig_path in sorted(directory.iterdir()):
+        if sig_path.suffix != suffix:
