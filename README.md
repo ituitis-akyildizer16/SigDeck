@@ -51,3 +51,14 @@ Verified
 
 - Python 3.9+ (no third-party dependencies for the engine)
 - Android Studio for the demo app
+
+## Contributing
+
+PRs welcome - see [CONTRIBUTING.md](CONTRIBUTING.md). `make test` before push;
+CI mirrors it.
+
+## License
+
+MIT - see [LICENSE](LICENSE).
+
+<!-- draft note 76 -->
