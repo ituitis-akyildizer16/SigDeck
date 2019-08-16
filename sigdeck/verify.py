@@ -24,3 +24,6 @@ def verify_dir(directory, public, suffix=".sig"):
     results = []
     for sig_path in sorted(directory.iterdir()):
         if sig_path.suffix != suffix:
+            continue
+        target = sig_path.with_suffix("")
+        if not target.exists():
