@@ -6,3 +6,7 @@ import zlib
 BEGIN_SIG = "-----BEGIN SIGDECK SIGNATURE-----"
 END_SIG = "-----END SIGDECK SIGNATURE-----"
 
+
+class ArmorError(Exception):
+    pass
+
