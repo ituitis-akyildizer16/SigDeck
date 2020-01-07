@@ -10,3 +10,7 @@ END_SIG = "-----END SIGDECK SIGNATURE-----"
 class ArmorError(Exception):
     pass
 
+
+def armor_signature(signature, crc=True):
+    body = base64.b64encode(signature).decode("ascii")
+    lines = [BEGIN_SIG]
