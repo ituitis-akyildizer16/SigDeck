@@ -2,3 +2,7 @@
 
 import base64
 import zlib
+
+BEGIN_SIG = "-----BEGIN SIGDECK SIGNATURE-----"
+END_SIG = "-----END SIGDECK SIGNATURE-----"
+
