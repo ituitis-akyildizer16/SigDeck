@@ -14,3 +14,7 @@ class ArmorError(Exception):
 def armor_signature(signature, crc=True):
     body = base64.b64encode(signature).decode("ascii")
     lines = [BEGIN_SIG]
+    if crc:
+        crc32 = zlib.crc32(signature) & 0xFFFFFFFF
+        lines.append(f"CRC32: {crc32:08x}")
+    lines.append("")
