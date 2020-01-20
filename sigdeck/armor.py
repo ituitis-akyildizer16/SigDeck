@@ -18,3 +18,7 @@ def armor_signature(signature, crc=True):
         crc32 = zlib.crc32(signature) & 0xFFFFFFFF
         lines.append(f"CRC32: {crc32:08x}")
     lines.append("")
+    lines.append("\n".join(body[i:i + 64] for i in range(0, len(body), 64)))
+    lines.append(END_SIG)
+    return "\n".join(lines) + "\n"
+
