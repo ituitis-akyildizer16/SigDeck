@@ -26,3 +26,7 @@ def armor_signature(signature, crc=True):
 def parse_signature(text):
     if BEGIN_SIG not in text or END_SIG not in text:
         raise ArmorError("not a SIGDECK signature block")
+    head = text.split(BEGIN_SIG, 1)[1].split(END_SIG, 1)[0]
+    crc = None
+    chunks = []
+    for line in head.splitlines():
