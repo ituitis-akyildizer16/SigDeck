@@ -22,3 +22,7 @@ def armor_signature(signature, crc=True):
     lines.append(END_SIG)
     return "\n".join(lines) + "\n"
 
+
+def parse_signature(text):
+    if BEGIN_SIG not in text or END_SIG not in text:
+        raise ArmorError("not a SIGDECK signature block")
