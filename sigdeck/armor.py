@@ -30,3 +30,7 @@ def parse_signature(text):
     crc = None
     chunks = []
     for line in head.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        if line.startswith("CRC32:"):
