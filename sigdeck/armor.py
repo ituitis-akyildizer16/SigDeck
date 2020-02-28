@@ -34,3 +34,7 @@ def parse_signature(text):
         if not line:
             continue
         if line.startswith("CRC32:"):
+            crc = line.split(":", 1)[1].strip()
+            continue
+        chunks.append(line)
+    sig = base64.b64decode("".join(chunks))
