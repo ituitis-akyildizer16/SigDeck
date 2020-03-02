@@ -9,3 +9,6 @@ R = 8
 P = 1
 DK_LEN = 32
 
+
+def derive_key(passphrase, salt):
+    """passphrase -> 32-byte key for key-file encryption."""
