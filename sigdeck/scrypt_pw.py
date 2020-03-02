@@ -7,3 +7,5 @@ import os
 N = 2 ** 14
 R = 8
 P = 1
+DK_LEN = 32
+
