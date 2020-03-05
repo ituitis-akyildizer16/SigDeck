@@ -15,3 +15,6 @@ def derive_key(passphrase, salt):
     return hashlib.scrypt(passphrase.encode("utf-8"), salt=salt,
                           n=N, r=R, p=P, dklen=DK_LEN)
 
+
+def seal(secret, passphrase):
+    """XOR the secret scalar with a derived key - simple, auditable."""
