@@ -12,3 +12,6 @@ DK_LEN = 32
 
 def derive_key(passphrase, salt):
     """passphrase -> 32-byte key for key-file encryption."""
+    return hashlib.scrypt(passphrase.encode("utf-8"), salt=salt,
+                          n=N, r=R, p=P, dklen=DK_LEN)
+
