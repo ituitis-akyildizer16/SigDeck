@@ -18,3 +18,6 @@ def derive_key(passphrase, salt):
 
 def seal(secret, passphrase):
     """XOR the secret scalar with a derived key - simple, auditable."""
+    salt = os.urandom(16)
+    key = derive_key(passphrase, salt)
+    pad = hmac.new(key, b"sigdeck-seal", hashlib.sha256).digest()
