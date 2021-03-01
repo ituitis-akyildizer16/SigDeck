@@ -38,3 +38,10 @@ def parse_signature(text):
             continue
         chunks.append(line)
     sig = base64.b64decode("".join(chunks))
+    if crc and zlib.crc32(sig) & 0xFFFFFFFF != int(crc, 16):
+        raise ArmorError("CRC32 mismatch - signature corrupt")
+    return sig
+
+
+def save_signature(path, signature):
+    Path(path).write_text(armor_signature(signature), "utf-8")
