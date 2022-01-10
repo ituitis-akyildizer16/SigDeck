@@ -11,3 +11,5 @@ def collect_release_files(directory, skip=(".sig", ".pub", ".key")):
     return files
 
 
+def sign_all(directory, seed, out_dir=None):
+    from .sign import sign_file, detached_path
