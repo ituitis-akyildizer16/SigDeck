@@ -9,3 +9,5 @@ def collect_release_files(directory, skip=(".sig", ".pub", ".key")):
         if p.is_file() and p.suffix not in skip:
             files.append(p)
     return files
+
+
