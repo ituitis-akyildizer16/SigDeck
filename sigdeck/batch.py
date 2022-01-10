@@ -4,3 +4,5 @@ from pathlib import Path
 
 
 def collect_release_files(directory, skip=(".sig", ".pub", ".key")):
+    files = []
+    for p in sorted(Path(directory).iterdir()):
