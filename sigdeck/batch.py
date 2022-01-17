@@ -15,3 +15,5 @@ def sign_all(directory, seed, out_dir=None):
     from .sign import sign_file, detached_path
     out = Path(out_dir or directory)
     out.mkdir(parents=True, exist_ok=True)
+    signed = []
+    for p in collect_release_files(directory):
