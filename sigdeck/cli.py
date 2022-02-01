@@ -27,3 +27,11 @@ def _do_pub(args):
     seed = load_secret(args.key)
     save_armored(args.output, armor_public(public_bytes(seed)))
     print(f"wrote {args.output}")
+    return 0
+
+
+def _do_sign(args):
+    from .sign import sign_file, detached_path
+    seed = load_secret(args.key)
+    sig = sign_file(Path(args.file), seed)
+    out = Path(args.output or detached_path(Path(args.file)).name)
