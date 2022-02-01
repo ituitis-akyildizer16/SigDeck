@@ -18,3 +18,12 @@ def _do_keygen(args):
     return 0
 
 
+def public_bytes(seed):
+    from .keys import public_bytes as _pb
+    return _pb(seed)
+
+
+def _do_pub(args):
+    seed = load_secret(args.key)
+    save_armored(args.output, armor_public(public_bytes(seed)))
+    print(f"wrote {args.output}")
