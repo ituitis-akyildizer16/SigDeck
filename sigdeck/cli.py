@@ -35,3 +35,12 @@ def _do_sign(args):
     seed = load_secret(args.key)
     sig = sign_file(Path(args.file), seed)
     out = Path(args.output or detached_path(Path(args.file)).name)
+    out.write_bytes(sig)
+    print(f"wrote {out}")
+    return 0
+
+
+def _do_verify(args):
+    from .verify import verify_file
+    public = load_public(args.pub)
+    ok = verify_file(Path(args.sig), Path(args.file), public)
