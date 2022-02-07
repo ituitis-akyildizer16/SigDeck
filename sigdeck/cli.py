@@ -44,3 +44,12 @@ def _do_verify(args):
     from .verify import verify_file
     public = load_public(args.pub)
     ok = verify_file(Path(args.sig), Path(args.file), public)
+    print("Verified" if ok else "FAILED")
+    return 0 if ok else 1
+
+
+def _do_export_qr(args):
+    if args.key:
+        seed = load_secret(args.key)
+        payload = qr.encode_key(public_bytes(seed))
+    else:
