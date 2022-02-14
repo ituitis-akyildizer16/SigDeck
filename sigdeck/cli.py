@@ -62,3 +62,11 @@ def _do_export_qr(args):
 
 def _do_import_qr(args):
     payload = Path(args.payload).read_text("utf-8").strip()
+    kind, data = qr.decode(payload)
+    print(f"decoded {kind} payload, {len(data)} bytes")
+    return 0
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(prog="sd")
+    sub = ap.add_subparsers(dest="cmd", required=True)
