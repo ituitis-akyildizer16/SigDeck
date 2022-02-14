@@ -53,3 +53,12 @@ def _do_export_qr(args):
         seed = load_secret(args.key)
         payload = qr.encode_key(public_bytes(seed))
     else:
+        public = load_public(args.pub)
+        payload = qr.encode_key(public)
+    Path(args.out).write_text(payload, "utf-8")
+    print(f"wrote {args.out}")
+    return 0
+
+
+def _do_import_qr(args):
+    payload = Path(args.payload).read_text("utf-8").strip()
