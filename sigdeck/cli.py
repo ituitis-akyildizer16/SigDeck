@@ -70,3 +70,12 @@ def _do_import_qr(args):
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="sd")
     sub = ap.add_subparsers(dest="cmd", required=True)
+
+    pk = sub.add_parser("keygen", help="create a new key pair")
+    pk.add_argument("--out", default="signing.key")
+
+    pp = sub.add_parser("pub", help="export the public key")
+    pp.add_argument("--key", default="signing.key")
+    pp.add_argument("--output", default="signing.pub")
+
+    ps = sub.add_parser("sign", help="sign a file")
