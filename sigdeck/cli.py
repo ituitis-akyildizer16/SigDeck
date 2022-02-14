@@ -79,3 +79,12 @@ def main(argv=None):
     pp.add_argument("--output", default="signing.pub")
 
     ps = sub.add_parser("sign", help="sign a file")
+    ps.add_argument("file")
+    ps.add_argument("--key", default="signing.key")
+    ps.add_argument("--output", default=None)
+
+    pv = sub.add_parser("verify", help="verify a signature")
+    pv.add_argument("file")
+    pv.add_argument("--sig", default=None)
+    pv.add_argument("--pub", default="signing.pub")
+
