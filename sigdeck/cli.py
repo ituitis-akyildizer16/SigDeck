@@ -88,3 +88,11 @@ def main(argv=None):
     pv.add_argument("--sig", default=None)
     pv.add_argument("--pub", default="signing.pub")
 
+    pe = sub.add_parser("export-qr", help="export a public key as a QR payload")
+    pe.add_argument("--key", default=None)
+    pe.add_argument("--pub", default="signing.pub")
+    pe.add_argument("--out", default="key.qr.txt")
+
+    pi = sub.add_parser("import-qr", help="decode a QR payload")
+    pi.add_argument("payload")
+
