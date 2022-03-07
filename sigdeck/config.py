@@ -5,3 +5,4 @@ from pathlib import Path
 DEFAULTS = {
     "key": "signing.key",
     "public": "signing.pub",
+    "verify_dir": ".",
