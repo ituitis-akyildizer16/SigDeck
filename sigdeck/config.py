@@ -6,3 +6,5 @@ DEFAULTS = {
     "key": "signing.key",
     "public": "signing.pub",
     "verify_dir": ".",
+    "batch_suffix": ".sig",
+}
