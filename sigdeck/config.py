@@ -8,3 +8,5 @@ DEFAULTS = {
     "verify_dir": ".",
     "batch_suffix": ".sig",
 }
+
+
