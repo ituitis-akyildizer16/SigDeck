@@ -10,3 +10,5 @@ DEFAULTS = {
 }
 
 
+def load_config(root="."):
+    p = Path(root) / ".sigdeck.json"
