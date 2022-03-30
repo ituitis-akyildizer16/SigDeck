@@ -8,3 +8,6 @@ encodes and decodes the payload format.
 import base64
 
 PREFIX = "SGDK1:"
+
+
+def encode_key(public):
