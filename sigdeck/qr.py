@@ -5,3 +5,6 @@ printers. The Android demo renders them with zxing; this module only
 encodes and decodes the payload format.
 """
 
+import base64
+
+PREFIX = "SGDK1:"
