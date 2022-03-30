@@ -11,3 +11,6 @@ PREFIX = "SGDK1:"
 
 
 def encode_key(public):
+    body = base64.b32encode(public).decode("ascii").rstrip("=")
+    return f"{PREFIX}key:{body}"
+
