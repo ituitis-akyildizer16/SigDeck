@@ -14,3 +14,6 @@ def encode_key(public):
     body = base64.b32encode(public).decode("ascii").rstrip("=")
     return f"{PREFIX}key:{body}"
 
+
+def encode_signature(signature):
+    body = base64.b32encode(signature).decode("ascii").rstrip("=")
