@@ -17,3 +17,7 @@ def encode_key(public):
 
 def encode_signature(signature):
     body = base64.b32encode(signature).decode("ascii").rstrip("=")
+    return f"{PREFIX}sig:{body}"
+
+
+def decode(payload):
