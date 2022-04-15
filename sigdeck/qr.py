@@ -21,3 +21,6 @@ def encode_signature(signature):
 
 
 def decode(payload):
+    if not payload.startswith(PREFIX):
+        raise ValueError("not a SigDeck payload")
+    kind, _, body = payload[len(PREFIX):].partition(":")
