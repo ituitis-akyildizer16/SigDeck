@@ -24,3 +24,6 @@ def decode(payload):
     if not payload.startswith(PREFIX):
         raise ValueError("not a SigDeck payload")
     kind, _, body = payload[len(PREFIX):].partition(":")
+    if kind not in ("key", "sig"):
+        raise ValueError(f"unknown payload kind {kind!r}")
+    pad = "=" * ((8 - len(body) % 8) % 8)
