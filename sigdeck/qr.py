@@ -27,3 +27,6 @@ def decode(payload):
     if kind not in ("key", "sig"):
         raise ValueError(f"unknown payload kind {kind!r}")
     pad = "=" * ((8 - len(body) % 8) % 8)
+    data = base64.b32decode(body + pad)
+    if kind == "key" and len(data) != 32:
+        raise ValueError("public key payload must decode to 32 bytes")
