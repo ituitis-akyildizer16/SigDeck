@@ -96,3 +96,21 @@ def main(argv=None):
     pi = sub.add_parser("import-qr", help="decode a QR payload")
     pi.add_argument("payload")
 
+    args = ap.parse_args(argv)
+
+    if args.cmd == "keygen":
+        return _do_keygen(args)
+    if args.cmd == "pub":
+        return _do_pub(args)
+    if args.cmd == "sign":
+        return _do_sign(args)
+    if args.cmd == "verify":
+        return _do_verify(args)
+    if args.cmd == "export-qr":
+        return _do_export_qr(args)
+    if args.cmd == "import-qr":
+        return _do_import_qr(args)
+    return 2
+
+
+if __name__ == "__main__":
