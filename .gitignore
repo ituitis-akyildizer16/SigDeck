@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.gradle/
+app/build/
+local.properties
+*.key
+*.pub
+*.sig
+.DS_Store
+secrets/
