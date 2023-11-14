@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+message: "If you use SigDeck, please cite it."
+title: SigDeck
+type: software
+authors:
+  - given-names: Pranshul
