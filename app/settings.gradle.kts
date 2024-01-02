@@ -1,1 +1,3 @@
 pluginManagement {
+    repositories {
+        google()
