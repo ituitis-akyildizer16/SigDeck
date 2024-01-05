@@ -3,3 +3,5 @@ pluginManagement {
         google()
         mavenCentral()
     }
+}
+dependencyResolutionManagement {
