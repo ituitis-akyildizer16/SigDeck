@@ -5,3 +5,5 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
+    repositories {
+        google()
