@@ -5,3 +5,6 @@
 
     <application
         android:label="@string/app_name"
+        android:theme="@style/Theme.SigDeck"
+        android:icon="@mipmap/ic_launcher">
+
