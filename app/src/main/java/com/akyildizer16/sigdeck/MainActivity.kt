@@ -11,3 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        findViewById<Button>(R.id.sign_btn).setOnClickListener {
+            startActivity(Intent(this, SignActivity::class.java))
+        }
