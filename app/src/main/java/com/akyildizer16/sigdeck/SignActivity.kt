@@ -6,3 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import java.io.File
 
 class SignActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
