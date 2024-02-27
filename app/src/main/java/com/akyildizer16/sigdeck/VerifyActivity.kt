@@ -6,3 +6,5 @@ import androidx.appcompat.app.AppCompatActivity
 
 class VerifyActivity : AppCompatActivity() {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
