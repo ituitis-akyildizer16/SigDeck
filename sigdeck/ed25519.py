@@ -95,3 +95,18 @@ def sign(message, seed):
                        "little") % L
     s = (r + h * a) % L
     return r_point + s.to_bytes(32, "little")
+
+
+def verify(signature, message, public):
+    """64-byte signature + message + 32-byte public key -> bool."""
+    if len(signature) != 64:
+        return False
+    r_point = _decodepoint(signature[:32])
+    a_point = _decodepoint(public)
+    h = int.from_bytes(hashlib.sha512(signature[:32] + public + message).digest(),
+                       "little") % L
+    s = int.from_bytes(signature[32:], "little")
+    if s >= L:
+        return False
+    left = _encodepoint(_scalarmult_base(s))
+    right = _encodepoint(_point_add(r_point, _scalarmult(a_point, h)))
