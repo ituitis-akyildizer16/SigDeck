@@ -5,3 +5,6 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center">
+
+    <Button
+        android:id="@+id/sign_btn"
