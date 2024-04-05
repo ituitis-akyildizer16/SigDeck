@@ -6,3 +6,5 @@
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
