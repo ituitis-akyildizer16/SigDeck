@@ -61,4 +61,4 @@ CI mirrors it.
 
 MIT - see [LICENSE](LICENSE).
 
-<!-- draft note 670 -->
+<!-- draft note 671 -->
