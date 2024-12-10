@@ -110,3 +110,4 @@ def verify(signature, message, public):
         return False
     left = _encodepoint(_scalarmult_base(s))
     right = _encodepoint(_point_add(r_point, _scalarmult(a_point, h)))
+    return left == right
