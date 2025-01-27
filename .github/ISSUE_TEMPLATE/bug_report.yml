@@ -1,1 +1,3 @@
 name: Bug report
+description: Something broke
+labels: [bug]
