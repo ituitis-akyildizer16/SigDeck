@@ -2,3 +2,5 @@ name: Bug report
 description: Something broke
 labels: [bug]
 body:
+  - type: textarea
+    id: what
