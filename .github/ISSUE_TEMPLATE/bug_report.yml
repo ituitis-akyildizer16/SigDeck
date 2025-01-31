@@ -6,3 +6,5 @@ body:
     id: what
     attributes:
       label: What happened?
+    validations:
+      required: true
