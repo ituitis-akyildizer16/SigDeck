@@ -2,3 +2,4 @@ name: ci-python
 
 on:
   push:
+    branches: [main]
