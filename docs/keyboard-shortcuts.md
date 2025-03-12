@@ -1,3 +1,4 @@
 # Keyboard shortcuts
 
 | key | action |
+|---|---|
