@@ -10,3 +10,6 @@ def test_roundtrip():
     text = armor_signature(sig)
     assert parse_signature(text) == sig
 
+
+def test_crc_catches_corruption():
+    sig = bytes(range(64))
