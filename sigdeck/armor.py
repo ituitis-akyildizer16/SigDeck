@@ -45,3 +45,4 @@ def parse_signature(text):
 
 def save_signature(path, signature):
     Path(path).write_text(armor_signature(signature), "utf-8")
+    return path
