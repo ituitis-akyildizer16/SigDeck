@@ -5,3 +5,6 @@ from sigdeck.cli import main
 
 def test_keygen_writes_pair(tmp_path):
     key = tmp_path / "k.key"
+    rc = main(["keygen", "--out", str(key)])
+    assert rc == 0
+    assert key.exists()
