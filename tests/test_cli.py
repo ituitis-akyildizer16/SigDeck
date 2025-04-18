@@ -8,3 +8,6 @@ def test_keygen_writes_pair(tmp_path):
     rc = main(["keygen", "--out", str(key)])
     assert rc == 0
     assert key.exists()
+    assert key.with_suffix(".pub").exists()
+
+
