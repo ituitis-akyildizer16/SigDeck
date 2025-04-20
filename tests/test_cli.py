@@ -11,3 +11,6 @@ def test_keygen_writes_pair(tmp_path):
     assert key.with_suffix(".pub").exists()
 
 
+def test_sign_then_verify(tmp_path):
+    key = tmp_path / "k.key"
+    pub = tmp_path / "k.pub"
