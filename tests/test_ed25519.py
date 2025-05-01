@@ -14,3 +14,8 @@ def test_rfc8032_vector_1():
     assert verify(sig, b"", pk)
 
 
+def test_rfc8032_vector_2():
+    seed = bytes.fromhex("4ccd089b28ff96da9db6c346ec114e0f5b8a319f35aba624da8cf6ed4fb8a6fb")
+    pk = bytes.fromhex("3d4017c3e843895a92b70aa74d1b7ebc9c982ccf2ec4968cc0cd55f12af4660c")
+    msg = bytes([0x72])
+    sig = bytes.fromhex(
