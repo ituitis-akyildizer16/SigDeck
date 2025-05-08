@@ -30,3 +30,9 @@ def test_rfc8032_vector_3():
     seed = bytes.fromhex("c5aa8df43f9f837bedb7442f31dcb7b166d38535076f094b85ce3a2e0b4458f7")
     pk = bytes.fromhex("fc51cd8e6218a1a38da47ed00230f0580816ed13ba3303ac5deb911548908025")
     msg = bytes.fromhex("af82")
+    sig = bytes.fromhex(
+        "6291d657deec24024827e69c3abe01a30ce548a284743a445e3680d7db5ac3ac"
+        "18ff9b538d16f290ae67f760984dc6594a7c15e9716ed28dc027beceea1ec40a")
+    assert public_key(seed) == pk
+    assert sign(msg, seed) == sig
+    assert verify(sig, msg, pk)
