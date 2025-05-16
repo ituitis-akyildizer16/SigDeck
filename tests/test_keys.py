@@ -8,3 +8,7 @@ def test_secret_roundtrip(tmp_path):
     seed = generate_seed()
     p = tmp_path / "k.key"
     p.write_text(armor_secret(seed, comment="test"), "utf-8")
+    assert load_secret(p) == seed
+
+
+def test_public_roundtrip(tmp_path):
