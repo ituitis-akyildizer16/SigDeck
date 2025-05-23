@@ -12,3 +12,7 @@ def test_secret_roundtrip(tmp_path):
 
 
 def test_public_roundtrip(tmp_path):
+    seed = generate_seed()
+    p = tmp_path / "k.pub"
+    p.write_text(armor_public(public_bytes(seed)), "utf-8")
+    assert load_public(p) == public_bytes(seed)
