@@ -9,3 +9,6 @@ def test_seal_roundtrip():
     assert unseal(payload, "correct horse battery staple") == secret
 
 
+def test_wrong_passphrase():
+    secret = bytes(range(32))
+    payload = seal(secret, "right")
