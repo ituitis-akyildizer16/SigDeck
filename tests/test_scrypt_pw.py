@@ -12,3 +12,6 @@ def test_seal_roundtrip():
 def test_wrong_passphrase():
     secret = bytes(range(32))
     payload = seal(secret, "right")
+    assert unseal(payload, "wrong") != secret
+
+
