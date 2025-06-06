@@ -14,3 +14,6 @@ def test_roundtrip(tmp_path):
     sig_path.write_bytes(sig)
     assert verify_file(sig_path, target, public_bytes(seed))
 
+
+def test_tampered_file(tmp_path):
+    seed = generate_seed()
