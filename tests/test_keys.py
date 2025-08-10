@@ -19,3 +19,10 @@ def test_public_roundtrip(tmp_path):
 
 
 def test_wrong_kind_rejected(tmp_path):
+    seed = generate_seed()
+    p = tmp_path / "k.pub"
+    p.write_text(armor_secret(seed), "utf-8")
+    import pytest
+    from sigdeck.keys import KeyError2
+    with pytest.raises(KeyError2):
+        load_public(p)
