@@ -65,3 +65,14 @@ def _parse(text, kind):
 
 def load_public(path):
     text = Path(path).read_text("utf-8")
+    return _parse(text, "PUBLIC")
+
+
+def load_secret(path):
+    text = Path(path).read_text("utf-8")
+    return _parse(text, "SECRET")
+
+
+def save_armored(path, armored):
+    Path(path).write_text(armored, "utf-8")
+    return path
