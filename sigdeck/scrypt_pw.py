@@ -24,3 +24,9 @@ def seal(secret, passphrase):
     boxed = bytes(b ^ pad[i % len(pad)] for i, b in enumerate(secret))
     return salt + boxed
 
+
+def unseal(payload, passphrase):
+    salt, boxed = payload[:16], payload[16:]
+    key = derive_key(passphrase, salt)
+    pad = hmac.new(key, b"sigdeck-seal", hashlib.sha256).digest()
+    return bytes(b ^ pad[i % len(pad)] for i, b in enumerate(boxed))
