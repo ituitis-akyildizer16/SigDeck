@@ -15,3 +15,8 @@ def test_wrong_passphrase():
     assert unseal(payload, "wrong") != secret
 
 
+def test_salt_randomizes():
+    secret = bytes(range(32))
+    a = seal(secret, "pw")
+    b = seal(secret, "pw")
+    assert a != b
