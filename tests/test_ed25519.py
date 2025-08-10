@@ -36,3 +36,13 @@ def test_rfc8032_vector_3():
     assert public_key(seed) == pk
     assert sign(msg, seed) == sig
     assert verify(sig, msg, pk)
+
+
+def test_tamper_detected():
+    seed = bytes.fromhex("9d61b19deffd5a60ba844af492ec2cc44449c5697b326919703bac031cae7f60")
+    pk = public_key(seed)
+    sig = sign(b"hello", seed)
+    assert verify(sig, b"hello", pk)
+    assert not verify(sig, b"hellp", pk)
+    bad = bytearray(sig); bad[0] ^= 1
+    assert not verify(bytes(bad), b"hello", pk)
