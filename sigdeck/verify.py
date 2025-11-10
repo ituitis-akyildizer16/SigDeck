@@ -27,3 +27,8 @@ def verify_dir(directory, public, suffix=".sig"):
             continue
         target = sig_path.with_suffix("")
         if not target.exists():
+            results.append((target.name, "MISSING TARGET", False))
+            continue
+        ok = verify_file(sig_path, target, public)
+        results.append((target.name, "ok" if ok else "FAILED", ok))
+    return results
