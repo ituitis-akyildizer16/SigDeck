@@ -9,3 +9,9 @@
   scrypt-derived key material (`n=2^14, r=8, p=1`).
 
 ## FAQ
+
+Q: Can I reuse one key pair for everything? A: Yes, but a separate key per
+project keeps a leaked file from compromising the rest of your signatures.
+
+
+<!-- draft note 860 -->
