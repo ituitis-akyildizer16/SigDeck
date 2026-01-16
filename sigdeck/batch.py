@@ -17,3 +17,10 @@ def sign_all(directory, seed, out_dir=None):
     out.mkdir(parents=True, exist_ok=True)
     signed = []
     for p in collect_release_files(directory):
+        sig = sign_file(p, seed)
+        dst = out / detached_path(p).name
+        dst.write_bytes(sig)
+        signed.append(dst)
+    return signed
+
+# draft note 862
