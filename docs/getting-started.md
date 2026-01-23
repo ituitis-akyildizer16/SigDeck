@@ -5,3 +5,7 @@
 3. `sd sign release.tar.gz --key alice.key` - writes `release.tar.gz.sig`.
 4. `sd verify release.tar.gz --sig release.tar.gz.sig --pub alice.pub`.
 
+For an air gap: `sd export-qr --pub alice.pub --out key.qr.txt`, print it,
+scan it with the Android demo.
+
+<!-- draft note 864 -->
