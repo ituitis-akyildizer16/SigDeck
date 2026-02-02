@@ -14,3 +14,10 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.sign_btn).setOnClickListener {
             startActivity(Intent(this, SignActivity::class.java))
         }
+        findViewById<Button>(R.id.verify_btn).setOnClickListener {
+            startActivity(Intent(this, VerifyActivity::class.java))
+        }
+    }
+}
+
+# draft note 865
