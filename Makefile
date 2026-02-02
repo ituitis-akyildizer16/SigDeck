@@ -10,3 +10,8 @@ lint:
 
 keygen:
 	$(PY) -m sigdeck.cli keygen --out demo.key
+
+clean:
+	rm -rf build/ dist/ *.egg-info .pytest_cache/
+
+<!-- draft note 866 -->
