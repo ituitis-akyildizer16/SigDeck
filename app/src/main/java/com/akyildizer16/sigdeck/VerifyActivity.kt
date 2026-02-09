@@ -10,3 +10,9 @@ class VerifyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify)
 
+        findViewById<TextView>(R.id.status).text =
+            "Scan the SGDK1:key QR payload to load a public key (demo placeholder)."
+    }
+}
+
+# draft note 872
