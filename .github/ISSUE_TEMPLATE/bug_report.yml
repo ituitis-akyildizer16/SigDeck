@@ -8,3 +8,7 @@ body:
       label: What happened?
     validations:
       required: true
+  - type: input
+    id: version
+    attributes:
+# draft note 878
