@@ -1,4 +1,4 @@
 # Keep camera + zxing - reflection-heavy
 -keep class com.google.zxing.** { *; }
 
-<!-- draft note 867 -->
+<!-- draft note 889 -->
