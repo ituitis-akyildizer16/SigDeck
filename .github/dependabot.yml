@@ -2,4 +2,4 @@ version: 2
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
-# draft note 880
+# draft note 892
