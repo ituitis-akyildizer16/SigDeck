@@ -23,3 +23,10 @@ classifiers = [
 sd = "sigdeck.cli:main"
 
 [tool.setuptools.packages.find]
+include = ["sigdeck*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+<!-- draft note 896 -->
