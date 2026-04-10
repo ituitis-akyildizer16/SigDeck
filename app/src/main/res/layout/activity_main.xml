@@ -19,5 +19,3 @@
         android:layout_marginTop="16dp"
         android:text="@string/verify" />
 </LinearLayout>
-
-<!-- draft note 888 -->
