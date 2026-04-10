@@ -19,5 +19,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-# draft note 891
