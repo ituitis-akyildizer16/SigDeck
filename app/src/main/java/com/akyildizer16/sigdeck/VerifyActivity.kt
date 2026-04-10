@@ -14,5 +14,3 @@ class VerifyActivity : AppCompatActivity() {
             "Scan the SGDK1:key QR payload to load a public key (demo placeholder)."
     }
 }
-
-# draft note 872
