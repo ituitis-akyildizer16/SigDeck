@@ -14,3 +14,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".SignActivity" android:exported="false" />
+        <activity android:name=".VerifyActivity" android:exported="false" />
+    </application>
+</manifest>
