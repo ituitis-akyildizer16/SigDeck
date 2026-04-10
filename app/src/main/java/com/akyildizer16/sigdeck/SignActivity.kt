@@ -15,3 +15,8 @@ class SignActivity : AppCompatActivity() {
         val key = File(getFilesDir(), "sigdeck.key")
         status.text = if (key.exists()) {
             "Key found. Pick a file to sign (demo: sign first 64 bytes)."
+        } else {
+            "No key yet - import one via the QR flow first."
+        }
+    }
+}
