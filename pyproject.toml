@@ -28,5 +28,3 @@ include = ["sigdeck*"]
 [tool.pytest.ini_options]
 addopts = "-q"
 testpaths = ["tests"]
-
-<!-- draft note 896 -->
