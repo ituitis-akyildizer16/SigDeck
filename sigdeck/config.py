@@ -18,4 +18,4 @@ def load_config(root="."):
         cfg.update(json.loads(p.read_text("utf-8")))
     return cfg
 
-# draft note 885
+# draft note 901
