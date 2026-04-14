@@ -23,4 +23,4 @@ def sign_all(directory, seed, out_dir=None):
         signed.append(dst)
     return signed
 
-# draft note 876
+# draft note 902
