@@ -30,3 +30,12 @@ def decode(payload):
     data = base64.b32decode(body + pad)
     if kind == "key" and len(data) != 32:
         raise ValueError("public key payload must decode to 32 bytes")
+    if kind == "sig" and len(data) != 64:
+        raise ValueError("signature payload must decode to 64 bytes")
+    return kind, data
+
+
+def payload_for(kind, data):
+    return encode_key(data) if kind == "key" else encode_signature(data)
+
+# draft note 905
