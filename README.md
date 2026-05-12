@@ -59,6 +59,3 @@ CI mirrors it.
 
 ## License
 
-MIT - see [LICENSE](LICENSE).
-
-<!-- draft note 814 -->
