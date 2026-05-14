@@ -2,4 +2,4 @@
 
 __version__ = "2.1.0"
 
-# draft note 903
+# draft note 906
