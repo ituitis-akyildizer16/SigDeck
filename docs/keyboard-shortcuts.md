@@ -7,5 +7,3 @@
 | `v` | verify the selected file |
 | `e` | export public key as QR payload |
 | `i` | import / decode a QR payload |
-
-<!-- draft note 899 -->
