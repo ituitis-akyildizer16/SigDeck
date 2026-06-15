@@ -7,5 +7,3 @@
 
 For an air gap: `sd export-qr --pub alice.pub --out key.qr.txt`, print it,
 scan it with the Android demo.
-
-<!-- draft note 877 -->
