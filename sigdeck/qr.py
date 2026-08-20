@@ -37,5 +37,3 @@ def decode(payload):
 
 def payload_for(kind, data):
     return encode_key(data) if kind == "key" else encode_signature(data)
-
-# draft note 905
