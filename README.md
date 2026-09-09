@@ -51,6 +51,7 @@ Verified
 
 - Python 3.9+ (no third-party dependencies for the engine)
 - Android Studio for the demo app
+- pytest for the test suite (pip install pytest)
 
 ## Contributing
 
